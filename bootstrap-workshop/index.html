@@ -7,32 +7,141 @@
   <title>Bootstrap Workshop</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+
+    .tarjeta-personalizada {
+      max-width: 600px; /* Ajusta el tamaño máximo para modo desktop */
+      margin: 50px auto;
+      background-color: #f7f0eb;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .imagen-izquierda {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .columna-contenido {
+      background-color: white;
+      padding: 20px;
+    }
+
+    .texto-muted {
+      font-size: 0.875rem;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+    }
+
+    h1.titulo-tarjeta {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p.texto-tarjeta {
+      font-size: 0.875rem;
+      color: #6c757d;
+    }
+
+    .precio {
+      color: #4f9567;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .precio-antiguo {
+      text-decoration: line-through;
+      color: #999999;
+      font-size: 1rem;
+    }
+
+    .btn-personalizado {
+      background-color: #4f9567;
+      color: white;
+      font-weight: bold;
+      width: 100%;
+      padding: 10px 0;
+      border-radius: 5px;
+      border-color: #4f9567;
+    }
+
+    .btn-personalizado:hover {
+      background-color: #417557;
+     
+    }
+
+    @media (min-width: 576px) {
+      .tarjeta-personalizada {
+        max-width: 540px;
+      }
+
+      h1.titulo-tarjeta {
+        font-size: 1.75rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .tarjeta-personalizada {
+        max-width: 720px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .imagen-izquierda {
+        width: 50%;
+      }
+
+      .columna-contenido {
+        width: 50%;
+        padding: 30px;
+      }
+
+      h1.titulo-tarjeta {
+        font-size: 1.75rem; /* Reducido para mantener proporción */
+      }
+
+      .precio {
+        font-size: 1.5rem; /* Reducido para mantener proporción */
+      }
+    }
+
+    @media (min-width: 992px) {
+      .tarjeta-personalizada {
+        max-width: 600px; /* Ajustado para evitar que se agrande demasiado */
+      }
+
+      h1.titulo-tarjeta {
+        font-size: 2rem; /* Ajustado para evitar que se agrande demasiado */
+      }
+    }
+  </style>
 </head>
 
 <body>
-  Your Result
-  76
-  of 100
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-
+  <div class="tarjeta-personalizada">
+    <!-- Imagen para dispositivos móviles -->
+    <img src="/assets/images/image-product-mobile.jpg" alt="" class="imagen-izquierda d-block d-md-none">
+    <!-- Imagen para dispositivos tablet y desktop -->
+    <img src="/assets/images/image-product-desktop.jpg" alt="" class="imagen-izquierda d-none d-md-block">
+    <div class="columna-contenido">
+      <p class="texto-muted">PERFUME</p>
+      <h1 class="titulo-tarjeta">Gabrielle Essence Eau De Parfum</h1>
+      <p class="texto-tarjeta">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the house of CHANEL</p>
+      <div class="d-flex align-items-center mt-3">
+        <div class="precio">$149.99</div>
+        <div class="precio-antiguo ms-3">$169.99</div>
+      </div>
+      <button class="btn-personalizado mt-3">Add to Cart</button>
+    </div>
+  </div>
 
   <!-- No elimine este tag -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
